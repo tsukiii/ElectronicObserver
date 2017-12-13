@@ -20,15 +20,8 @@ namespace ElectronicObserver.Data.Quest
 		{
 		}
 
-		public void Increment(int amount)
-		{
-			for (int i = 0; i < amount; i++)
-				Increment();
-		}
-
-		public override string GetClearCondition()
-		{
-			return "Dismantle ship ×" + ProgressMax;
+		public override string GetClearCondition() {
+			return QuestTracking.Dismantlement + ProgressMax;
 		}
 	}
 }

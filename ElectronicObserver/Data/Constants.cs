@@ -406,15 +406,15 @@ namespace ElectronicObserver.Data
 			switch (value)
 			{
 				case 1:
-					return "Resources damaged";
+					return "Resources Damaged";
 				case 2:
-					return "Resources and air squadron damaged";
+					return "Resources and Air Squadron Damaged";
 				case 3:
-					return "Air squadron damaged";
+					return "Air Squadron Damaged";
 				case 4:
-					return "No damage";
+					return "No Damage";
 				default:
-					return "No air raid";
+					return "No Air Raid";
 			}
 		}
 
@@ -1025,15 +1025,15 @@ namespace ElectronicObserver.Data
 			switch (value)
 			{
 				case 0:
-					return "Normal Fleet";
+					return ConstantsRes.NormalFleet;
 				case 1:
-					return "Carrier TF";
+					return ConstantsRes.TaskForce;
 				case 2:
-					return "Surface TF";
+					return ConstantsRes.SurfaceFleet;
 				case 3:
-					return "Transport Fleet";
+					return ConstantsRes.TransportFleet;
 				default:
-					return "Unknown";
+					return ConstantsRes.Unknown;
 			}
 		}
 

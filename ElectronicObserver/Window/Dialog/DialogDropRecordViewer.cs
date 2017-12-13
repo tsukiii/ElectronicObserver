@@ -917,11 +917,11 @@ namespace ElectronicObserver.Window.Dialog
 
 				if (!Directory.Exists(Data.Battle.BattleManager.BattleLogPath))
 				{
-					StatusInfo.Text = "Battle history was not found.";
+					StatusInfo.Text = "戦闘ログが見つかりませんでした。";
 					return;
 				}
 
-				StatusInfo.Text = "Searching battle history...";
+				StatusInfo.Text = "戦闘ログを検索しています…";
 				string battleLogFile = Directory.EnumerateFiles(Data.Battle.BattleManager.BattleLogPath,
 					time.ToString("yyyyMMdd_HHmmss", System.Globalization.CultureInfo.InvariantCulture) + "*.txt",
 					SearchOption.TopDirectoryOnly)
@@ -929,18 +929,18 @@ namespace ElectronicObserver.Window.Dialog
 
 				if (battleLogFile == null)
 				{
-					StatusInfo.Text = "Battle history could not be found.";
+					StatusInfo.Text = "戦闘ログが見つかりませんでした。";
 					return;
 				}
 
-				StatusInfo.Text = string.Format("Open battle history {0}.", Path.GetFileName(battleLogFile));
+				StatusInfo.Text = string.Format("戦闘ログ {0} を開きます。", Path.GetFileName(battleLogFile));
 				System.Diagnostics.Process.Start(battleLogFile);
 
 
 			}
 			catch (Exception)
 			{
-				StatusInfo.Text = "Could not open battle history.";
+				StatusInfo.Text = "戦闘ログを開けませんでした。";
 			}
 
 		}
